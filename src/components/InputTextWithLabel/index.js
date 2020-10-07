@@ -3,12 +3,12 @@ import InputText from '../InputText'
 import { TextInput, Text, View, StyleSheet } from 'react-native'
 import colors from '../../constants/colors'
 
-const InputTextWithLabel = ({label}) => {
+const InputTextWithLabel = ({label, value, password=false, onChange}) => {
 
     return (
        <View style={style.container} > 
             <Text style={style.label}>{label}</Text>
-            <TextInput style={style.input}></TextInput> 
+            <TextInput style={style.input} secureTextEntry={password} value={value} onChangeText={onChange}></TextInput> 
        </View> 
     )
 
@@ -16,18 +16,15 @@ const InputTextWithLabel = ({label}) => {
 
 const style = StyleSheet.create({
     container: {                                            
-            flexDirection: 'row',
-            backgroundColor: colors.red,
-            marginBottom: 10,
-            
+            flexDirection: 'row',            
+            marginBottom: 10
         },
     input : {
         backgroundColor: colors.gray,
         flex: 8.8
     },
     label : {
-        flex: 1.2,
-        backgroundColor: colors.yellow,
+        flex: 1.2,       
         alignSelf: "center"
     }
 })  

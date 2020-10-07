@@ -23,7 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './src/screens/CadastroScreen';
+import HomeScreen from './src/screens/HomeScreen';
 
 const App = () =>  {
   return (
